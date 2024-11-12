@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Word Find Arcade Privacy Policy</title>
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+</head>
+<body>
+    <div style="width: 100%;text-align:center;">
+        <table style="display: inline-block; text-align: center; border-radius: 5px; font-family:Arial;">
+            <tr>
+                <td id="Header" style="height: 60px; background: #4285F4 center no-repeat url('header.svg'); border-radius:3px;"></td>
+            </tr>
+            <tr>
+                <td id="Body" style="width:100%; text-align: left; padding:0 0 20px 10px; background-color:#FFF; color:#000; font-weight:normal;">
+                </td>
+            </tr>
+            <tr>
+                <td id="Footer" style="text-align: center; background-color: #4285F4; color: #FFF; font-weight: normal; line-height: 20px; border-radius: 3px;">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+
+        var _Body = document.getElementById("Body");
+        var _Footer = document.getElementById("Footer");
+
+        window.addEventListener("resize", _Resize);
+
+        function _Init()
+        {
+            _Resize();
+
+            // SECTION ONE
+            var headerText = "GENERAL STATEMENT";
+            var bodyText = "No first-party collection of data occurs, however, third-party ad services are integrated to support this free app. Therefore, we disclose that this app collects and shares user data using third-party services by Google.";
+            _Body.appendChild(_GetSection(_GetHeaderElement(headerText), _GetTextElement(bodyText)));
+
+            // SECTION TWO
+            var headerText = "GOOGLE ADMOB & ADSENSE";
+            var bodyText = "We use Google AdMob and AdSense to serve ads by placing one clearly marked banner advertisement at the top of each page.";
+            _Body.appendChild(_GetSection(_GetHeaderElement(headerText), _GetTextElement(bodyText)));
+
+            // SECTION THREE
+            var headerText = "PERSONALIZATION OPT-OUT";
+            var bodyText = "Google wants to show ads relevant to you and uses an advertising ID to serve personalized ads based on your interests. You may opt-out of personalized advertising by navigating to the Android Settings menu (Settings-> Privacy-> Ads) to \"delete advertising ID\". You may also \"reset advertising ID\" to generate a new advertising ID and regain unbiased recommendations.";
+            _Body.appendChild(_GetSection(_GetHeaderElement(headerText), _GetTextElement(bodyText)));
+
+            var link = document.createElement("span");
+            link.style.cssText = "display: inline-block;margin-top:10px; padding-left:10px;";
+            link.innerHTML = "For reference, <a href='https://developers.google.com/admob/android/privacy/play-data-disclosure#data_collected_and_shared_automatically'>here</a> are Google's listed types of data collected and shared.";
+            _Body.appendChild(link);
+        }
+
+        function _Resize()
+        {
+            _Body.style.width = (window.innerWidth > 770 ? 770 : window.innerWidth) + "px";
+            _Body.style.fontSize = window.devicePixelRatio * 12 + "px";
+
+            _Footer.style.fontSize = window.devicePixelRatio * 12 + "px";
+            _Footer.innerText = "Word Find Arcade © " + new Date().getFullYear();
+        }
+
+        function _GetSection(header, text) {
+            var element = document.createElement("div");
+            element.style.cssText = "";
+            element.appendChild(header);
+            element.appendChild(text);
+            return element;
+        }
+
+        function _GetHeaderElement(text) {
+            var element = document.createElement("b");
+            element.style.cssText = "display:inline-block; width:100%; margin:20px 0 10px 0;";
+            element.innerText = text;
+            return element;
+        }
+
+        function _GetTextElement(text) {
+            var element = document.createElement("span");
+            element.style.cssText = "display: inline-block;padding-left:10px;";
+            element.innerText = text;
+            return element;
+        }
+
+        _Init();
+
+    </script>
+
+</body>
+</html>
