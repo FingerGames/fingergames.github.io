@@ -22,7 +22,6 @@
             </tr>
         </table>
     </div>
-
     <script type="text/javascript">
 
         var _Body = document.getElementById("Body");
@@ -36,17 +35,17 @@
 
             // SECTION ONE
             var headerText = "GENERAL STATEMENT";
-            var bodyText = "No first-party collection of data occurs, however, third-party ad services are integrated to support this free app. Therefore, we disclose that this app collects and shares user data using third-party services by Google.";
+            var bodyText = "While no first-party collection of data occurs, third-party ad services are integrated to support this free app. Therefore, we disclose that this app collects and shares user data using third-party services by Google; AdMob and AdSense.";
             _Body.appendChild(_GetSection(_GetHeaderElement(headerText), _GetTextElement(bodyText)));
 
             // SECTION TWO
-            var headerText = "GOOGLE ADMOB & ADSENSE";
-            var bodyText = "We use Google AdMob and AdSense to serve ads by placing one clearly marked banner advertisement at the top of each page.";
+            var headerText = "GOOGLE ADS";
+            var bodyText = "One clearly marked banner advertisement appears at the top of each page and is populated using Google's AdMob and AdSense services.";
             _Body.appendChild(_GetSection(_GetHeaderElement(headerText), _GetTextElement(bodyText)));
 
             // SECTION THREE
-            var headerText = "PERSONALIZATION OPT-OUT";
-            var bodyText = "Google wants to show ads relevant to you and uses an advertising ID to serve personalized ads based on your interests. You may opt-out of personalized advertising by navigating to the Android Settings menu (Settings-> Privacy-> Ads) to \"delete advertising ID\". You may also \"reset advertising ID\" to generate a new advertising ID and regain unbiased recommendations.";
+            var headerText = "AD PERSONALIZATION OPT-OUT";
+            var bodyText = "Google wants to show ads relevant to you and uses an advertising ID to serve personalized ads based on your interests. You may opt-out of personalized advertising by navigating to the Android Settings menu (Settings-> Privacy-> Ads) to \"delete advertising ID\". You may also \"reset advertising ID\" to generate a new advertising ID.";
             _Body.appendChild(_GetSection(_GetHeaderElement(headerText), _GetTextElement(bodyText)));
 
             var link = document.createElement("span");
@@ -89,6 +88,5 @@
         _Init();
 
     </script>
-
 </body>
 </html>
